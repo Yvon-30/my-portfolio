@@ -1,497 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yvon MENSAH — Développeur full-stack Symfony &amp; Laravel</title>
+    <meta name="description" content="Développeur full-stack basé à Abomey-Calavi (Bénin), spécialisé en Symfony et Laravel. Applications web fiables et sécurisées. Disponible pour des missions freelance.">
+    <link rel="canonical" href="https://yvon-30.github.io/my-portfolio/">
+    <meta name="theme-color" content="#0E1014">
 
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
-        <link rel="manifest" href="assets/favicon_io/site.webmanifest">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="Yvon MENSAH">
+    <meta property="og:title" content="Yvon MENSAH — Développeur full-stack Symfony &amp; Laravel">
+    <meta property="og:description" content="Applications web fiables et sécurisées, avec une attention particulière à la logique métier, à la qualité du code et à la sécurité.">
+    <meta property="og:url" content="https://yvon-30.github.io/my-portfolio/">
+    <meta property="og:image" content="https://yvon-30.github.io/my-portfolio/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Yvon MENSAH, développeur full-stack Symfony et Laravel, Abomey-Calavi, Bénin">
+    <meta name="twitter:card" content="summary_large_image">
 
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Sen&amp;display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest">
 
-        <!-- Icons -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/devicons@1.8.0/css/devicons.min.css" rel="stylesheet">
-        <script src="assets/fonts/FontAwesome/js/all.min.js" crossorigin="anonymous"></script>
+    <!-- Theme before first paint: saved choice, else system preference, else dark -->
+    <script>
+        (function () {
+            var theme;
+            try { theme = localStorage.getItem('theme'); } catch (e) {}
+            if (theme !== 'light' && theme !== 'dark') {
+                theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            }
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
 
-        <!-- Libraries -->
-        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 
-        <!-- Stylesheet  -->
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/fonts/FontAwesome/css/all.min.css">
-        <title>Yvon MENSAH Codes</title>
-    </head>
-    <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" class="">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
 
-        <header>
-            <div class="wrapper">
-                <nav>
-                    <ul class="top-nav">
-                        <li tabindex="0">
-                            <a href="#home">Home</a>
-                        </li>
-                        <li tabindex="0">
-                            <a href="#about">About</a>
-                        </li>
-                        <li tabindex="0">
-                            <a href="#current">Projects</a>
-                        </li>
-                        <li tabindex="0">
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    
-                    <div tabindex="0" class="hamburger">
-                        <label class="visually-hidden" for="ham-check">Open menu</label>
-                        <input type="checkbox" name="hamburger" id="ham-check" class="ham-input">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-                        <span></span>
-                        <span></span>
-                        <span></span>
+    <!-- Icons: Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com (Icons: CC BY 4.0) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <defs>
+            <symbol id="icon-github" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></symbol>
+            <symbol id="icon-linkedin" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></symbol>
+            <symbol id="icon-x" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></symbol>
+            <symbol id="icon-whatsapp" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></symbol>
+            <symbol id="icon-envelope" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol>
+            <symbol id="icon-sun" viewBox="0 0 512 512"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></symbol>
+            <symbol id="icon-moon" viewBox="0 0 384 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></symbol>
+            <symbol id="icon-external" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></symbol>
+            <pattern id="abomey" width="56" height="20" patternUnits="userSpaceOnUse">
+                <path d="M0 20 L10 4 L20 20 Z" fill="var(--color-accent)" opacity="0.85"/>
+                <rect x="24" y="8" width="8" height="4" fill="var(--color-ochre)" opacity="0.8"/>
+                <path d="M36 4 L46 4 L41 14 Z" fill="none" stroke="var(--color-accent)" stroke-width="1.5" opacity="0.7"/>
+                <rect x="0" y="19" width="56" height="1" fill="var(--color-border)"/>
+            </pattern>
+        </defs>
+    </svg>
 
-                        <ul class="hamburger-menu" id="ham">
-                            <li tabindex="0" class="ham-link">
-                                <a href="#home">Home</a>
-                            </li>
-                            <li tabindex="0" class="ham-link">
-                                <a href="#about">About</a>
-                            </li>
-                            <li tabindex="0" class="ham-link">
-                                <a href="#current">Projects</a>
-                            </li>
-                            <li tabindex="0" class="ham-link">
-                                <a href="#contact">Contact</a>
-                            </li>
-                        </ul>
-                        
-                    </div>
-                </nav>
-            </div>        
-                        
-            <!-- Navigation -->
-            
-            <section class="welcome" id="home">
-                <div class="wrapper">
-                    <div class="welcome-name">
-                        <h1>
-                            <span class="name" id="messenger">Yvon MENSAH</span>
-                            <br>
-                            <span>Analyst - Designer</span>
-                            <br>
-                            <span>Full Stack Developer</span>
-                        </h1>
-                    </div>
-                </div>
-            </section>
-            <span aria-hidden="true" class="material-icons arrow" tabindex="0">expand_more</span>
-
-            <div class="switch-light">
-                <input type="checkbox" class="light-check" id="light-dark" tabindex="0">
-            
-                <label for="light-dark" class="toggle-light" title="Switch to Light Mode" tabindex="0">
-                <span aria-hidden="true" class="fas fa-moon"></span>
-                <span class="sr-only">Switch to dark mode</span>
-
-                <span aria-hidden="true" class="fas fa-sun"></span>
-                <span class="sr-only">Switch to light mode</span>
-
-                <div aria-hidden="true" class="switch"></div>
-                </label>
+    <header class="wrapper">
+        <nav class="nav" aria-label="Navigation principale">
+            <a class="nav-logo" href="#accueil">Yvon MENSAH</a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#a-propos">À propos</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activer le thème clair">
+                    <svg class="icon icon-sun" aria-hidden="true" focusable="false"><use href="#icon-sun"/></svg>
+                    <svg class="icon icon-moon" aria-hidden="true" focusable="false"><use href="#icon-moon"/></svg>
+                </button>
             </div>
-            <!-- Welcome Page -->
-        </header>
-    
-        <main>
+        </nav>
 
-            <div class="spacer"></div>
+        <section class="hero" id="accueil">
+            <p class="eyebrow mono">
+                <span>Abomey-Calavi, Bénin</span>
+                <span class="available">Disponible pour des missions freelance</span>
+            </p>
+            <h1>
+                Yvon MENSAH
+                <span class="role">Développeur full-stack, <em>Symfony &amp; Laravel</em></span>
+            </h1>
+            <p class="hero-lead">Je conçois des applications web fiables et sécurisées, avec une attention particulière à la logique métier, à la qualité du code et à la sécurité.</p>
+            <div class="actions">
+                <a class="btn btn-primary" href="#projets">Voir les études de cas</a>
+                <a class="btn btn-secondary" href="#contact">Me contacter</a>
+            </div>
+        </section>
+    </header>
 
-            <!-- About Me -->
-            <section class="about-me" id="about">
-                <div class="wrapper">
-                    
-                    <div class="about-name">
-                        <h2>About Me</h2> 
-                    </div>  
+    <main class="wrapper" id="contenu">
+        <svg class="abomey" aria-hidden="true" focusable="false"><rect width="100%" height="20" fill="url(#abomey)"/></svg>
 
-                    <div class="about-me-container" style="overflow-x: hidden">
-                        <div class="about-pic aos-init" data-aos="fade-right" data-aos-duration="1000">
-                            <img src="assets/images/Yvon.png" alt="young boy (Yvon MENSAH) standing in front of blue background">
-                        </div>
-
-                        <div class="about-text aos-init" data-aos="fade-left" data-aos-duration="1000">
-                            <p>Hello World! I'm Yvon MENSAH, an aspiring full-stack developer with a passion for analysis and design. I love combining logic and creativity to build user-friendly websites and applications.</p>
-
-                            <p><span>Technology leads, society follows.</span> I believe in the power of technology to drive positive change, especially in fostering inclusivity and diversity. I'm dedicated to contributing to this movement through my work.</p>
-
-                            <p>I'm eager to grow with a forward-thinking company. Let's chat about exciting projects or share your favorite spots in Abomey-Calavi via the contact form <a href="#contact" tabindex="0">below</a>. Connect with me on:</p>
-
-                            <ul class="socials"> 
-                                <li tabindex="0">
-                                    <a href="https://github.com/Yvon-30" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Yvon's Github">
-                                        <span class="fab fa-github" aria-hidden="true"></span>  
-                                    </a>
-                                </li>
-                    
-                                <li tabindex="0">
-                                    <a href="https://www.linkedin.com/in/yvon-mensah-85a81320b/" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Yvon's LinkedIn">
-                                        <span class="fab fa-linkedin" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                    
-                                <li tabindex="0">
-                                    <a href="https://twitter.com/ym121109" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Yvon's X">
-                                        <span class="fab fa-x-twitter" aria-hidden="true"></span>
-                                    </a>
-                                </li>
-                            </ul> 
-                        </div>
-                    </div>
+        <section class="section" id="a-propos">
+            <h2 class="section-title"><span class="mono">01 / À propos</span>Qui je suis</h2>
+            <div class="about">
+                <picture class="about-photo">
+                    <source srcset="assets/images/yvon.webp" type="image/webp">
+                    <img src="assets/images/Yvon.png" alt="Portrait d'Yvon MENSAH" width="800" height="1000" loading="lazy">
+                </picture>
+                <div class="about-text">
+                    <p>Développeur full-stack basé à Abomey-Calavi, spécialisé en Symfony et Laravel. Je conçois et maintiens les solutions internes d'une entreprise de fiscalité, comptabilité et gestion des ressources, où j'assure aussi le support informatique et accompagne la mise en service de nos outils chez des clients externes. J'accorde une attention particulière à la sécurité et à la fiabilité de ce que je livre.</p>
                 </div>
-                    
-            </section>
+            </div>
+        </section>
 
-            <div class="spacer"></div>
+        <section class="section" id="projets">
+            <h2 class="section-title"><span class="mono">02 / Études de cas</span>Projets sélectionnés</h2>
 
-            <!-- Skills -->
-            <section class="skills">
-                <div class="wrapper">
+            <!-- Variante A : Problème → Solution → Stack → Résultat -->
+            <article class="case">
+                <!-- Emplacement capture (à décommenter quand l'image sera fournie, ratio 16:10 réservé) :
+                <figure class="case-media">
+                    <img src="assets/images/gestion-caisses.webp" alt="Capture de l'application Gestion Caisses" width="1600" height="1000" loading="lazy">
+                </figure>
+                -->
+                <div class="case-body">
+                    <h3>Gestion Caisses</h3>
+                    <dl>
+                        <dt>Problème</dt>
+                        <dd>Dans une organisation avec plusieurs points de caisse, les dépenses doivent être validées par la hiérarchie avant d'affecter les soldes, avec une traçabilité fiable.</dd>
 
-                    <h2><span>Skills</span></h2>
-                
-                    <ul class="skills-container">
+                        <dt>Solution</dt>
+                        <dd>Application multi-caisses avec validation hiérarchique configurable (1 ou 2 niveaux), contrôle de solde, transferts entre caisses, rapports PDF et activation de compte par lien sécurisé.</dd>
 
-                        <li class="skills-title">
-                            <span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span>
-                            <p>HTML5</p>
-                        </li>
+                        <dt>Stack</dt>
+                        <dd>
+                            <ul class="chips">
+                                <li>Symfony 7</li>
+                                <li>React</li>
+                                <li>PostgreSQL</li>
+                                <li>JWT</li>
+                                <li>Doctrine</li>
+                                <li>Railway</li>
+                                <li>Vercel</li>
+                            </ul>
+                        </dd>
 
-                        <li class="skills-title">
-                            <span aria-hidden="true" class="devicons devicons-css3" title="CSS"></span>
-                            <p>CSS</p>
-                        </li>
-
-                        <li class="skills-title">
-                            <span aria-hidden="true" class="devicons devicons-javascript_badge" title="JavaScript"></span>
-                            <p>JavaScript</p>
-                        </li>
-
-                        <li class="skills-title">
-                            <span aria-hidden="true" class="devicons devicons-bootstrap" title="Bootstrap"></span>
-                            <p>Bootstrap</p">
-                        </li>
-                    
-                        <li class="skills-title">
-                            <span aria-hidden="true" class="devicons devicons devicons-angular" title="Angular"></span>
-                            <p>AngularJS</p>
-                        </li>
-                        
-                        <li class="skills-title">
-                            <span aria-hidden="true" class="devicons devicons-php" title="PHP"></span>
-                            <p>PHP</p>
-                        </li>
-
-                        <li class="skills-title">
-                            <span aria-hidden="true" class="devicons devicons-laravel" title="Laravel"></span>
-                            <p>Laravel</p>
-                        </li>
-
-                        <li class="skills-title">
-                            <span aria-hidden="true" class="devicons devicons-symfony" title="Symfony"></span>
-                            <p>Symfony</p>
-                        </li>
-
-                        <li class="skills-title">
-                            <span aria-hidden="true" class="devicons devicons-java" title="Java"></span>
-                            <p>Java</p>
-                        </li>
-
-                        <li class="skills-title">
-                            <span aria-hidden="true" class="devicons devicons-mysql" title="MySQL"></span>
-                            <p>MySQL</p>
-                        </li>
-                    
-                        <li class="skills-title">
-                            <span aria-hidden="true" class="devicons devicons-git" title="Git"></span>
-                            <p>Git</p>
-                        </li>
-            
-                        <li class="skills-title">
-                            <span aria-hidden="true" class="devicons devicons-responsive" title="Responsive Design"></span>
-                            <p>Responsive
-                            <br>
-                            Design</p>
-                        </li>
-
-                    </ul>
-
-                </div>
-            </section>
-
-            <div class="spacer"></div>
-
-            <!-- Current Projects -->
-            <section class="current" id="current">
-                <div class="wrapper">
-                    <div class="current-title">
-                        <h2><span>Current Projects</span>
-                        </h2>
-                        <p>Skills grow. So will this portfolio.</p>
-                    </div>
-
-                    <div class="project-container" style="overflow-x: hidden">
-                        <!-- Ticket Online Project -->
-                        <div class="project current-one">
-
-                            <div class="mockup aos-init" data-aos="zoom-in-right" data-aos-duration="1500">
-                                <img src="assets/images/ticket.png" alt="Mockup of Ticket Online">
-                            </div>
-
-                            <div class="project-text aos-init" data-aos="zoom-in-left" data-aos-duration="1500">
-                                <h3>TICKET ONLINE</h3>
-                                <p>Reserve Your Seat, Anytime, Anywhere</p>
-                                <p>An online cinema ticket booking system built to streamline movie reservations. Book your tickets, select your seats, and enjoy the show. TICKET ONLINE also empowers cinema staff with efficient management tools to enhance their operations.</p>
-
-                                <div class="made-with">
-                                    <h4>Made With</h4>
-                                    <ul class="project-icons-container">
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span>
-                                        </li>
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons devicons-css3" title="CSS"></span>
-                                        </li>
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons devicons-javascript_badge" title="JavaScript"></span>
-                                        </li>
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons-bootstrap" title="Bootstrap"></span>
-                                        </li>
-                                    </ul>
-
-                                </div>
-
-                                <div class="project-links">
-                                    <a href="https://github.com/Yvon-30/ticket-platform" target="_blank" rel="noopener noreferrer" tabindex="0" aria-hidden="true" title="TICKET ONLINE on Github">Github</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- ENSITECH Project (masqué pour l'instant : retirer ce commentaire pour réafficher la carte)
-                        <div class="project current-two">
-
-                            <div class="project-text aos-init" data-aos="zoom-in-right" data-aos-duration="1500">
-                                <h3>ENSITECH</h3>
-                                <p>Transform the way you learn.</p>
-                                <p>A digital school management application designed to enhance the efficiency of school administration and improve student engagement. Built with modern web technologies, ENSITECH simplifies operations, offering a seamless experience for both staff and students.</p>
-
-                                <div class="made-with">
-                                    <h4>Made With</h4>
-                                    <ul class="project-icons-container">
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span>
-                                        </li>
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons devicons-css3" title="CSS"></span>
-                                        </li>
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons devicons-javascript_badge" title="JavaScript"></span>
-                                        </li>
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons-bootstrap" title="Bootstrap"></span>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                                
-                                <div class="project-links">
-                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0" aria-hidden="true" title="Live link to ENSITECH">Live Site</a>
-                                    <span>|</span>
-                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0" aria-hidden="true" title="ENSITECH on Github">Github</a>
-                                </div>
-
-                            </div>
-                            <div class="mockup aos-init" data-aos="zoom-in-left" data-aos-duration="1500">
-                                <img src="assets/images/online-course.png" alt="Mockup of Got Music? on 15 inch Macbook Pro">
-                            </div>
-
-                        </div>
+                        <dt>Résultat</dt>
+                        <dd>Déployée en production avec une démo publique. Audit de sécurité complet avant mise en ligne&nbsp;: faille d'élévation de privilège corrigée, bugs de solde et de transferts résolus, secrets renouvelés.</dd>
+                    </dl>
+                    <div class="case-links">
+                        <a class="text-link" href="https://gestion-caisses.vercel.app" target="_blank" rel="noopener noreferrer">Voir la démo<svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-external"/></svg><span class="visually-hidden"> (nouvel onglet)</span></a>
+                        <!-- Lien GitHub masqué tant que le dépôt est privé (404 pour les visiteurs) :
+                        <a class="text-link" href="https://github.com/Yvon-30/gestion-caisses" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-github"/></svg>Voir sur GitHub<span class="visually-hidden"> (nouvel onglet)</span></a>
                         -->
-
-                    
                     </div>
-
                 </div>
-            </section>
+            </article>
 
-            <div class="spacer"></div>
+            <!-- Variante B : Description → Stack → Résultat -->
+            <article class="case">
+                <div class="case-body">
+                    <h3>Ticket Platform</h3>
+                    <dl>
+                        <dt>Description</dt>
+                        <dd>Conçu au départ comme un système de réservation pour salles de cinéma, le projet a évolué vers une plateforme plus large de gestion et vente de billets d'événements — repensée à la fois techniquement et dans son approche de commercialisation.</dd>
 
-            <!-- Projects -->
-            <section class="projects">
-                <div class="wrapper">
+                        <dt>Stack</dt>
+                        <dd>
+                            <ul class="chips">
+                                <li>React</li>
+                                <li>Vite</li>
+                                <li>Tailwind CSS</li>
+                                <li>Node.js</li>
+                                <li>Express</li>
+                                <li>Sequelize</li>
+                                <li>MySQL</li>
+                                <li>JWT</li>
+                            </ul>
+                        </dd>
 
-                    <h2><span>Projects</span></h2>
-
-                    <div class="project-container" style="overflow-x: hidden">
-                        <!-- File Management System -->
-                        <div class="project project-one">
-
-                            <div class="mockup aos-init" data-aos="zoom-in-right" data-aos-duration="1500">
-                                <img src="assets/images/file.png" alt="Mockup of File Management System">
-                            </div>
-
-                            <div class="project-text aos-init" data-aos="zoom-in-left" data-aos-duration="1500">
-                                <h3>File Management System</h3>
-                                <p>Manage Your Files with Ease</p>
-                                <p>A streamlined web application built with Django that helps you upload, organize, and share your files securely. Designed with a user-friendly interface and advanced search capabilities, making file management simple and efficient.</p>
-
-                                <div class="made-with">
-                                    <h4>Made With</h4>
-                                    <ul class="project-icons-container">
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons devicons-html5" title="HTML5"></span>
-                                        </li>
-
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons-css3" title="CSS"></span>
-                                        </li>
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons-javascript_badge" title="Javascipt &amp; ES6"></span>
-                                        </li>
-                                        
-                                    </ul>
-
-                                </div>
-
-                                <div class="project-links">
-                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0" aria-hidden="true" title="Live link to File Management System">Live Site</a>
-                                    <span>|</span>
-                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0" aria-hidden="true" title="File Management System on Github">Github</a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Property Management  -->
-                        <div class="project project-two">
-
-                            <div class="project-text aos-init" data-aos="zoom-in-right" data-aos-duration="1500">
-                                <h3>Property Management</h3>
-                                <p>Find Your Dream Home</p>
-                                <p>A modern real estate listing platform developed with Angular and Node.js, offering seamless property searches, detailed listings, and direct communication with agents. The platform is designed to help users find the perfect home with ease and confidence.</p>
-
-                                <div class="made-with">
-                                    <h4>Made With</h4>
-                                    <ul class="project-icons-container">
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons-angular" title="Angular"></span>
-                                        </li>
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons-nodejs_small" title="Node.JS"></span>
-                                        </li>
-                                        <li>
-                                            <span aria-hidden="true" class="devicons devicons-jquery" title="jQuery"></span>
-                                        </li> 
-                                        <li>
-                                            <span aria-hidden="true" class="material-icons" title="REST APIs">settings_ethernet</span>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                                
-                                <div class="project-links">
-                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0" aria-hidden="true" title="Live link to Property Management">Live Site</a>
-                                    <span>|</span>
-                                    <a href="#" target="_blank" rel="noopener noreferrer" tabindex="0" aria-hidden="true" title="Property Management on Github">Github</a>
-                                </div>
-
-                            </div>
-                            <div class="mockup aos-init" data-aos="zoom-in-left" data-aos-duration="1500">
-                                <img src="assets/images/property.png" alt="Mockup of Property Management">
-                            </div>
-
-                        </div>
+                        <dt>Résultat</dt>
+                        <dd>Projet en développement actif avec mon binôme. Architecture complète posée&nbsp;; fonctionnalités de vente et gestion de billets en cours de finalisation.</dd>
+                    </dl>
+                    <div class="case-links">
+                        <a class="text-link" href="https://github.com/Yvon-30/ticket-platform" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-github"/></svg>Voir sur GitHub<span class="visually-hidden"> (nouvel onglet)</span></a>
                     </div>
-
                 </div>
-            </section>
+            </article>
+        </section>
 
-            <div class="spacer"></div>
+        <section class="section" id="competences">
+            <h2 class="section-title"><span class="mono">03 / Compétences</span>Stack et pratiques</h2>
+            <div class="skills">
+                <div class="skill-group">
+                    <h3>Backend</h3>
+                    <ul class="chips">
+                        <li>PHP</li>
+                        <li>Symfony</li>
+                        <li>Laravel</li>
+                        <li>Doctrine</li>
+                        <li>API REST</li>
+                        <li>JWT</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Bases de données</h3>
+                    <ul class="chips">
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Front-end</h3>
+                    <ul class="chips">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Outils et déploiement</h3>
+                    <ul class="chips">
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Railway</li>
+                        <li>Vercel</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Pratiques</h3>
+                    <ul class="chips">
+                        <li>Audit de sécurité</li>
+                        <li>Gestion des secrets</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-            <!-- Contact -->
-            <section class="contact" id="contact">
-                <div class="wrapper">
+        <svg class="abomey" aria-hidden="true" focusable="false"><rect width="100%" height="20" fill="url(#abomey)"/></svg>
 
-                    <h2><span>Contact Me</span></h2>
+        <section class="section" id="contact">
+            <h2 class="section-title"><span class="mono">04 / Contact</span>Travaillons ensemble</h2>
+            <p class="contact-lead">Une mission, un poste ou une question&nbsp;? Écrivez-moi par e-mail ou sur WhatsApp.</p>
+            <div class="actions">
+                <a class="btn btn-primary" href="mailto:yvonmensah22@gmail.com"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-envelope"/></svg>M'écrire un e-mail</a>
+                <a class="btn btn-secondary" href="https://wa.me/2290190010916" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-whatsapp"/></svg>Discuter sur WhatsApp<span class="visually-hidden"> (nouvel onglet)</span></a>
+            </div>
+            <ul class="socials">
+                <li><a class="text-link" href="https://www.linkedin.com/in/yvon-mensah-85a81320b/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-linkedin"/></svg>LinkedIn<span class="visually-hidden"> (nouvel onglet)</span></a></li>
+                <li><a class="text-link" href="https://github.com/Yvon-30" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-github"/></svg>GitHub<span class="visually-hidden"> (nouvel onglet)</span></a></li>
+                <li><a class="text-link" href="https://x.com/ym121109" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-x"/></svg>X<span class="visually-hidden"> (nouvel onglet)</span></a></li>
+            </ul>
+        </section>
+    </main>
 
-                    <div class="form-container">
+    <footer class="footer">
+        <div class="wrapper">
+            <p class="mono">© 2026 Yvon MENSAH · Abomey-Calavi, Bénin</p>
+        </div>
+    </footer>
 
-                        <form action="http://www.focuspocus.io/magic/9ce4fe3a3521e1197789a8a125ce8e5b" method="POST" enctype="multipart/form-data" name="contact-form">
-                            
-                            <label class="visually-hidden" for="name">Enter name</label>
-                            <input type="text" name="name" id="name" placeholder="Your name" required="" tabindex="0" data-ddg-inputtype="identities.fullName">
-
-                            <label class="visually-hidden" for="email">Enter email</label>
-                            <input type="email" name="email" id="email" placeholder="Your email" required="" tabindex="0" data-ddg-inputtype="identities.emailAddress" data-ddg-autofill="true" style="background-size: auto 24px !important; background-position: right center !important; background-repeat: no-repeat !important; background-origin: content-box !important; background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI4IiBoZWlnaHQ9IjEyOCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDEyOCAxMjgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8cGF0aCBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Im02NCAxMjhjMzUuMzQ2IDAgNjQtMjguNjU0IDY0LTY0cy0yOC42NTQtNjQtNjQtNjQtNjQgMjguNjU0LTY0IDY0IDI4LjY1NCA2NCA2NCA2NHoiIGZpbGw9IiNkZTU4MzMiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPgogICAgPHBhdGggY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtNzMgMTExLjc1YzAtLjUuMTIzLS42MTQtMS40NjYtMy43ODItNC4yMjQtOC40NTktOC40Ny0yMC4zODQtNi41NC0yOC4wNzUuMzUzLTEuMzk3LTMuOTc4LTUxLjc0NC03LjA0LTUzLjM2NS0zLjQwMi0xLjgxMy03LjU4OC00LjY5LTExLjQxOC01LjMzLTEuOTQzLS4zMS00LjQ5LS4xNjQtNi40ODIuMTA1LS4zNTMuMDQ3LS4zNjguNjgzLS4wMy43OTggMS4zMDguNDQzIDIuODk1IDEuMjEyIDMuODMgMi4zNzUuMTc4LjIyLS4wNi41NjYtLjM0Mi41NzctLjg4Mi4wMzItMi40ODIuNDAyLTQuNTkzIDIuMTk1LS4yNDQuMjA3LS4wNDEuNTkyLjI3My41MyA0LjUzNi0uODk3IDkuMTctLjQ1NSAxMS45IDIuMDI3LjE3Ny4xNi4wODQuNDUtLjE0Ny41MTItMjMuNjk0IDYuNDQtMTkuMDAzIDI3LjA1LTEyLjY5NiA1Mi4zNDQgNS42MTkgMjIuNTMgNy43MzMgMjkuNzkyIDguNCAzMi4wMDRhLjcxOC43MTggMCAwIDAgLjQyMy40NjdjOC4xNTYgMy4yNDggMjUuOTI4IDMuMzkyIDI1LjkyOC0yLjEzMnoiIGZpbGw9IiNkZGQiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPgogICAgPHBhdGggZD0ibTc2LjI1IDExNi41Yy0yLjg3NSAxLjEyNS04LjUgMS42MjUtMTEuNzUgMS42MjUtNC43NjQgMC0xMS42MjUtLjc1LTE0LjEyNS0xLjg3NS0xLjU0NC00Ljc1MS02LjE2NC0xOS40OC0xMC43MjctMzguMTg1bC0uNDQ3LTEuODI3LS4wMDQtLjAxNWMtNS40MjQtMjIuMTU3LTkuODU1LTQwLjI1MyAxNC40MjctNDUuOTM4LjIyMi0uMDUyLjMzLS4zMTcuMTg0LS40OTItMi43ODYtMy4zMDUtOC4wMDUtNC4zODgtMTQuNjA1LTIuMTExLS4yNy4wOTMtLjUwNi0uMTgtLjMzNy0uNDEyIDEuMjk0LTEuNzgzIDMuODIzLTMuMTU1IDUuMDcxLTMuNzU2LjI1OC0uMTI0LjI0Mi0uNTAyLS4wMy0uNTg4YTI3Ljg3NyAyNy44NzcgMCAwIDAgLTMuNzcyLS45Yy0uMzctLjA1OS0uNDAzLS42OTMtLjAzMi0uNzQzIDkuMzU2LTEuMjU5IDE5LjEyNSAxLjU1IDI0LjAyOCA3LjcyNmEuMzI2LjMyNiAwIDAgMCAuMTg2LjExNGMxNy45NTIgMy44NTYgMTkuMjM4IDMyLjIzNSAxNy4xNyAzMy41MjgtLjQwOC4yNTUtMS43MTUuMTA4LTMuNDM4LS4wODUtNi45ODYtLjc4MS0yMC44MTgtMi4zMjktOS40MDIgMTguOTQ4LjExMy4yMS0uMDM2LjQ4OC0uMjcyLjUyNS02LjQzOCAxIDEuODEyIDIxLjE3MyA3Ljg3NSAzNC40NjF6IiBmaWxsPSIjZmZmIi8+CiAgICA8cGF0aCBkPSJtODQuMjggOTAuNjk4Yy0xLjM2Ny0uNjMzLTYuNjIxIDMuMTM1LTEwLjExIDYuMDI4LS43MjgtMS4wMzEtMi4xMDMtMS43OC01LjIwMy0xLjI0Mi0yLjcxMy40NzItNC4yMTEgMS4xMjYtNC44OCAyLjI1NC00LjI4My0xLjYyMy0xMS40ODgtNC4xMy0xMy4yMjktMS43MS0xLjkwMiAyLjY0Ni40NzYgMTUuMTYxIDMuMDAzIDE2Ljc4NiAxLjMyLjg0OSA3LjYzLTMuMjA4IDEwLjkyNi02LjAwNS41MzIuNzQ5IDEuMzg4IDEuMTc4IDMuMTQ4IDEuMTM3IDIuNjYyLS4wNjIgNi45NzktLjY4MSA3LjY0OS0xLjkyMS4wNC0uMDc1LjA3NS0uMTY0LjEwNS0uMjY2IDMuMzg4IDEuMjY2IDkuMzUgMi42MDYgMTAuNjgyIDIuNDA2IDMuNDctLjUyMS0uNDg0LTE2LjcyMy0yLjA5LTE3LjQ2N3oiIGZpbGw9IiMzY2E4MmIiLz4KICAgIDxwYXRoIGQ9Im03NC40OSA5Ny4wOTdjLjE0NC4yNTYuMjYuNTI2LjM1OC44LjQ4MyAxLjM1MiAxLjI3IDUuNjQ4LjY3NCA2LjcwOS0uNTk1IDEuMDYyLTQuNDU5IDEuNTc0LTYuODQzIDEuNjE1cy0yLjkyLS44MzEtMy40MDMtMi4xODFjLS4zODctMS4wODEtLjU3Ny0zLjYyMS0uNTcyLTUuMDc1LS4wOTgtMi4xNTguNjktMi45MTYgNC4zMzQtMy41MDYgMi42OTYtLjQzNiA0LjEyMS4wNzEgNC45NDQuOTQgMy44MjgtMi44NTcgMTAuMjE1LTYuODg5IDEwLjgzOC02LjE1MiAzLjEwNiAzLjY3NCAzLjQ5OSAxMi40MiAyLjgyNiAxNS45MzktLjIyIDEuMTUxLTEwLjUwNS0xLjEzOS0xMC41MDUtMi4zOCAwLTUuMTUyLTEuMzM3LTYuNTY1LTIuNjUtNi43MXptLTIyLjUzLTEuNjA5Yy44NDMtMS4zMzMgNy42NzQuMzI1IDExLjQyNCAxLjk5MyAwIDAtLjc3IDMuNDkxLjQ1NiA3LjYwNC4zNTkgMS4yMDMtOC42MjcgNi41NTgtOS44IDUuNjM3LTEuMzU1LTEuMDY1LTMuODUtMTIuNDMyLTIuMDgtMTUuMjM0eiIgZmlsbD0iIzRjYmEzYyIvPgogICAgPHBhdGggY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtNTUuMjY5IDY4LjQwNmMuNTUzLTIuNDAzIDMuMTI3LTYuOTMyIDEyLjMyMS02LjgyMiA0LjY0OC0uMDE5IDEwLjQyMi0uMDAyIDE0LjI1LS40MzZhNTEuMzEyIDUxLjMxMiAwIDAgMCAxMi43MjYtMy4wOTVjMy45OC0xLjUxOSA1LjM5Mi0xLjE4IDUuODg3LS4yNzIuNTQ0Ljk5OS0uMDk3IDIuNzIyLTEuNDg4IDQuMzA5LTIuNjU2IDMuMDMtNy40MzEgNS4zOC0xNS44NjUgNi4wNzYtOC40MzMuNjk4LTE0LjAyLTEuNTY1LTE2LjQyNSAyLjExOC0xLjAzOCAxLjU4OS0uMjM2IDUuMzMzIDcuOTIgNi41MTIgMTEuMDIgMS41OSAyMC4wNzItMS45MTcgMjEuMTkuMjAxIDEuMTE5IDIuMTE4LTUuMzIzIDYuNDI4LTE2LjM2MiA2LjUxOHMtMTcuOTM0LTMuODY1LTIwLjM3OS01LjgzYy0zLjEwMi0yLjQ5NS00LjQ5LTYuMTMzLTMuNzc1LTkuMjc5eiIgZmlsbD0iI2ZjMyIgZmlsbC1ydWxlPSJldmVub2RkIi8+CiAgICA8ZyBmaWxsPSIjMTQzMDdlIiBvcGFjaXR5PSIuOCI+CiAgICAgIDxwYXRoIGQ9Im02OS4zMjcgNDIuMTI3Yy42MTYtMS4wMDggMS45ODEtMS43ODYgNC4yMTYtMS43ODYgMi4yMzQgMCAzLjI4NS44ODkgNC4wMTMgMS44OC4xNDguMjAyLS4wNzYuNDQtLjMwNi4zNGE1OS44NjkgNTkuODY5IDAgMCAxIC0uMTY4LS4wNzNjLS44MTctLjM1Ny0xLjgyLS43OTUtMy41NC0uODItMS44MzgtLjAyNi0yLjk5Ny40MzUtMy43MjcuODMxLS4yNDYuMTM0LS42MzQtLjEzMy0uNDg4LS4zNzJ6bS0yNS4xNTcgMS4yOWMyLjE3LS45MDcgMy44NzYtLjc5IDUuMDgxLS41MDQuMjU0LjA2LjQzLS4yMTMuMjI3LS4zNzctLjkzNS0uNzU1LTMuMDMtMS42OTItNS43Ni0uNjc0LTIuNDM3LjkwOS0zLjU4NSAyLjc5Ni0zLjU5MiA0LjAzOC0uMDAyLjI5Mi42LjMxNy43NTYuMDcuNDItLjY3IDEuMTItMS42NDYgMy4yODktMi41NTN6Ii8+CiAgICAgIDxwYXRoIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibTc1LjQ0IDU1LjkyYTMuNDcgMy40NyAwIDAgMSAtMy40NzQtMy40NjIgMy40NyAzLjQ3IDAgMCAxIDMuNDc1LTMuNDYgMy40NyAzLjQ3IDAgMCAxIDMuNDc0IDMuNDYgMy40NyAzLjQ3IDAgMCAxIC0zLjQ3NSAzLjQ2MnptMi40NDctNC42MDhhLjg5OS44OTkgMCAwIDAgLTEuNzk5IDBjMCAuNDk0LjQwNS44OTUuOS44OTUuNDk5IDAgLjktLjQuOS0uODk1em0tMjUuNDY0IDMuNTQyYTQuMDQyIDQuMDQyIDAgMCAxIC00LjA0OSA0LjAzNyA0LjA0NSA0LjA0NSAwIDAgMSAtNC4wNS00LjAzNyA0LjA0NSA0LjA0NSAwIDAgMSA0LjA1LTQuMDM3IDQuMDQ1IDQuMDQ1IDAgMCAxIDQuMDUgNC4wMzd6bS0xLjE5My0xLjMzOGExLjA1IDEuMDUgMCAwIDAgLTIuMDk3IDAgMS4wNDggMS4wNDggMCAwIDAgMi4wOTcgMHoiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPgogICAgPC9nPgogICAgPHBhdGggY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtNjQgMTE3Ljc1YzI5LjY4NSAwIDUzLjc1LTI0LjA2NSA1My43NS01My43NXMtMjQuMDY1LTUzLjc1LTUzLjc1LTUzLjc1LTUzLjc1IDI0LjA2NS01My43NSA1My43NSAyNC4wNjUgNTMuNzUgNTMuNzUgNTMuNzV6bTAgNWMzMi40NDcgMCA1OC43NS0yNi4zMDMgNTguNzUtNTguNzVzLTI2LjMwMy01OC43NS01OC43NS01OC43NS01OC43NSAyNi4zMDMtNTguNzUgNTguNzUgMjYuMzAzIDU4Ljc1IDU4Ljc1IDU4Ljc1eiIgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPg==&quot;) !important; transition: background 0s ease 0s !important;">
-
-                            <label class="visually-hidden" for="message">Write a message</label>
-                            <textarea name="message" id="message" placeholder="IGOR was one of the best albums of 2019." rows="6" cols="50" wrap="hard" required="" tabindex="0">                        </textarea>   
-
-                            <button type="submit" name="submit">Get in touch</button>
-
-                        </form>
-
-                        <div class="form-text">
-                            <p>If you have any questions about me or my projects, I'm your guy!</p>
-                            <br>
-                            <p>I'm available to grab a coffee and chat! Drop a comment, question, or concern, and thanks for stopping by!</p>
-                            <br>
-                            <p>Straight shot to my inbox: 
-                                <a href="mailto:yvonmensah22@gmail.com?subject=Getting in Touch with Yvon MENSAH" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Email Yvon directly">yvonmensah22gmail.com</a>
-                            </p> 
-                        </div>
-
-                    </div>
-                    <ul class="socials"> 
-                        <li tabindex="0">
-                            <a href="https://github.com/Yvon-30" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Yvon's Github">
-                                <span class="fab fa-github" aria-hidden="true"></span>
-                                
-                            </a>
-                        </li>
-            
-                        <li tabindex="0">
-                            <a href="https://www.linkedin.com/in/yvon-mensah-85a81320b/" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Yvon's LinkedIn">
-                                <span class="fab fa-linkedin" aria-hidden="true"></span>
-                            </a>
-                        </li>
-            
-                        <li tabindex="0">
-                            <a href="https://twitter.com/ym121109" target="_blank" rel="noopener noreferrer" aria-hidden="true" title="Go to Yvon's X">
-                                <span class="fab fa-x-twitter" aria-hidden="true"></span>
-                            </a>
-                        </li>
-                    </ul> 
-                    <a class="back-to-top" tabindex="0" id="top">Back to Top</a>
-                </div>   
-            </section>
-
-            <div class="spacer"></div>
-
-        </main>
-
-        <footer>
-            <p>Designed by Yvon MENSAH 2024</p>
-        </footer>
-
-        <!-- Added Scripts -->
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script src="assets/js/script.js"></script>
-    </body>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
